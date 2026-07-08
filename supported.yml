@@ -1,0 +1,30 @@
+datasources:
+  - model_name: app_group
+    oas_endpoint: /apps/config.eda.nokia.com
+    oas_schema: AppGroup
+  - model_name: resource_list
+    oas_endpoint: /apps/config.eda.nokia.com/v1
+    oas_schema: ResourceList
+  - model_name: configlet_list
+    oas_endpoint: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets
+    oas_schema: com.nokia.eda.config.v1.ConfigletList
+  - model_name: configlet
+    oas_endpoint: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets/{name}
+    oas_schema: com.nokia.eda.config.v1.Configlet
+
+resources:
+  - model_name: configlet
+    oas_endpoint: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets
+    oas_schema: com.nokia.eda.config.v1.Configlet
+
+qualified:
+  datasources:
+    - oas_schema: IntentTargets
+      get: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets/{name}/_targets
+    - oas_schema: ResourceHistory
+      get: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets/{name}/_revs
+    - oas_schema: UIResult
+      get: /apps/config.eda.nokia.com/v1/_ui/{pathname}
+    - oas_schema: com.nokia.eda.config.v1.Configlet_DeletedResources
+      get: /apps/config.eda.nokia.com/v1/namespaces/{namespace}/configlets/_deleted
+  resources:
