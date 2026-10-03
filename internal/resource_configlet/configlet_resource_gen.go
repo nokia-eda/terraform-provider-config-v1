@@ -131,6 +131,7 @@ func ConfigletResourceSchema(ctx context.Context) schema.Schema {
 							Attributes: map[string]schema.Attribute{
 								"config": schema.StringAttribute{
 									Optional:            true,
+									Computed:            true,
 									Description:         "JSON-formatted string representing the configuration to apply.",
 									MarkdownDescription: "JSON-formatted string representing the configuration to apply.",
 								},
@@ -167,17 +168,20 @@ func ConfigletResourceSchema(ctx context.Context) schema.Schema {
 					"endpoint_selectors": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Label selector to use to match targets to deploy Configlet to.",
 						MarkdownDescription: "Label selector to use to match targets to deploy Configlet to.",
 					},
 					"endpoints": schema.ListAttribute{
 						ElementType:         types.StringType,
 						Optional:            true,
+						Computed:            true,
 						Description:         "Reference to targets to deploy Configlet to.",
 						MarkdownDescription: "Reference to targets to deploy Configlet to.",
 					},
 					"operating_system": schema.StringAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "Operating system to match against when selecting targets.",
 						MarkdownDescription: "Operating system to match against when selecting targets.",
 						Validators: []validator.String{
@@ -188,6 +192,8 @@ func ConfigletResourceSchema(ctx context.Context) schema.Schema {
 								"sonic",
 								"ios-xr",
 								"nxos",
+								"junos",
+								"cumulus",
 							),
 						},
 					},
@@ -203,6 +209,7 @@ func ConfigletResourceSchema(ctx context.Context) schema.Schema {
 					},
 					"version": schema.StringAttribute{
 						Optional:            true,
+						Computed:            true,
 						Description:         "Version to match against when selecting targets.",
 						MarkdownDescription: "Version to match against when selecting targets.",
 					},

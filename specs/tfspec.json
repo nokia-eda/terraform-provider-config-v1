@@ -191,32 +191,32 @@
                     {
                         "name": "spec",
                         "single_nested": {
-                            "computed_optional_required": "optional",
+                            "computed_optional_required": "computed",
                             "attributes": [
                                 {
                                     "name": "configs",
                                     "list_nested": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "nested_object": {
                                             "attributes": [
                                                 {
                                                     "name": "config",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "JSON-formatted string representing the configuration to apply."
                                                     }
                                                 },
                                                 {
                                                     "name": "operation",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Indicates the operation in which to apply the configuration."
                                                     }
                                                 },
                                                 {
                                                     "name": "path",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Path to apply the configuration in jspath notation, including any keys if relevant, e.g. .system.information."
                                                     }
                                                 }
@@ -228,7 +228,7 @@
                                 {
                                     "name": "endpoint_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -238,7 +238,7 @@
                                 {
                                     "name": "endpoints",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -248,21 +248,21 @@
                                 {
                                     "name": "operating_system",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Operating system to match against when selecting targets."
                                     }
                                 },
                                 {
                                     "name": "priority",
                                     "int64": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Priority of this Configlet, between -100 and 100. Higher priorities overwrite lower priorities in the event of conflicts."
                                     }
                                 },
                                 {
                                     "name": "version",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed",
                                         "description": "Version to match against when selecting targets."
                                     }
                                 }
@@ -442,32 +442,32 @@
                                     {
                                         "name": "spec",
                                         "single_nested": {
-                                            "computed_optional_required": "optional",
+                                            "computed_optional_required": "computed",
                                             "attributes": [
                                                 {
                                                     "name": "configs",
                                                     "list_nested": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "nested_object": {
                                                             "attributes": [
                                                                 {
                                                                     "name": "config",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "JSON-formatted string representing the configuration to apply."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "operation",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Indicates the operation in which to apply the configuration."
                                                                     }
                                                                 },
                                                                 {
                                                                     "name": "path",
                                                                     "string": {
-                                                                        "computed_optional_required": "optional",
+                                                                        "computed_optional_required": "computed",
                                                                         "description": "Path to apply the configuration in jspath notation, including any keys if relevant, e.g. .system.information."
                                                                     }
                                                                 }
@@ -479,7 +479,7 @@
                                                 {
                                                     "name": "endpoint_selectors",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -489,7 +489,7 @@
                                                 {
                                                     "name": "endpoints",
                                                     "list": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "element_type": {
                                                             "string": {}
                                                         },
@@ -499,21 +499,21 @@
                                                 {
                                                     "name": "operating_system",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Operating system to match against when selecting targets."
                                                     }
                                                 },
                                                 {
                                                     "name": "priority",
                                                     "int64": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Priority of this Configlet, between -100 and 100. Higher priorities overwrite lower priorities in the event of conflicts."
                                                     }
                                                 },
                                                 {
                                                     "name": "version",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed",
                                                         "description": "Version to match against when selecting targets."
                                                     }
                                                 }
@@ -804,7 +804,7 @@
                                                 {
                                                     "name": "config",
                                                     "string": {
-                                                        "computed_optional_required": "optional",
+                                                        "computed_optional_required": "computed_optional",
                                                         "description": "JSON-formatted string representing the configuration to apply."
                                                     }
                                                 },
@@ -845,7 +845,7 @@
                                 {
                                     "name": "endpoint_selectors",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -855,7 +855,7 @@
                                 {
                                     "name": "endpoints",
                                     "list": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "element_type": {
                                             "string": {}
                                         },
@@ -865,7 +865,7 @@
                                 {
                                     "name": "operating_system",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "Operating system to match against when selecting targets.",
                                         "validators": [
                                             {
@@ -875,7 +875,7 @@
                                                             "path": "github.com/hashicorp/terraform-plugin-framework-validators/stringvalidator"
                                                         }
                                                     ],
-                                                    "schema_definition": "stringvalidator.OneOf(\n\"srl\",\n\"sros\",\n\"eos\",\n\"sonic\",\n\"ios-xr\",\n\"nxos\",\n)"
+                                                    "schema_definition": "stringvalidator.OneOf(\n\"srl\",\n\"sros\",\n\"eos\",\n\"sonic\",\n\"ios-xr\",\n\"nxos\",\n\"junos\",\n\"cumulus\",\n)"
                                                 }
                                             }
                                         ]
@@ -906,7 +906,7 @@
                                 {
                                     "name": "version",
                                     "string": {
-                                        "computed_optional_required": "optional",
+                                        "computed_optional_required": "computed_optional",
                                         "description": "Version to match against when selecting targets."
                                     }
                                 }

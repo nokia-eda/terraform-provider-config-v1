@@ -35,12 +35,6 @@ description: |-
 <a id="nestedatt--items"></a>
 ### Nested Schema for `items`
 
-Optional:
-
-- `spec` (Attributes) Configlet is a configuration snippet that can be applied to a set of targets.
-The path on the target is provided in jspath notation, and the configuration is provided as a JSON string.
-Configlets can be applied to a set of targets based on a label selector, a list of targets, or a combination of both. (see [below for nested schema](#nestedatt--items--spec))
-
 Read-Only:
 
 - `alarms` (Attributes) (see [below for nested schema](#nestedatt--items--alarms))
@@ -48,30 +42,10 @@ Read-Only:
 - `deviations` (Attributes) (see [below for nested schema](#nestedatt--items--deviations))
 - `kind` (String)
 - `metadata` (Attributes) (see [below for nested schema](#nestedatt--items--metadata))
+- `spec` (Attributes) Configlet is a configuration snippet that can be applied to a set of targets.
+The path on the target is provided in jspath notation, and the configuration is provided as a JSON string.
+Configlets can be applied to a set of targets based on a label selector, a list of targets, or a combination of both. (see [below for nested schema](#nestedatt--items--spec))
 - `status` (Attributes) Deployment status of this Configlet. (see [below for nested schema](#nestedatt--items--status))
-
-<a id="nestedatt--items--spec"></a>
-### Nested Schema for `items.spec`
-
-Optional:
-
-- `configs` (Attributes List) Configurations to apply, being sets of paths, operations and JSON configurations. (see [below for nested schema](#nestedatt--items--spec--configs))
-- `endpoint_selectors` (List of String) Label selector to use to match targets to deploy Configlet to.
-- `endpoints` (List of String) Reference to targets to deploy Configlet to.
-- `operating_system` (String) Operating system to match against when selecting targets.
-- `priority` (Number) Priority of this Configlet, between -100 and 100. Higher priorities overwrite lower priorities in the event of conflicts.
-- `version` (String) Version to match against when selecting targets.
-
-<a id="nestedatt--items--spec--configs"></a>
-### Nested Schema for `items.spec.configs`
-
-Optional:
-
-- `config` (String) JSON-formatted string representing the configuration to apply.
-- `operation` (String) Indicates the operation in which to apply the configuration.
-- `path` (String) Path to apply the configuration in jspath notation, including any keys if relevant, e.g. .system.information.
-
-
 
 <a id="nestedatt--items--alarms"></a>
 ### Nested Schema for `items.alarms`
@@ -101,6 +75,29 @@ Read-Only:
 - `labels` (Map of String)
 - `name` (String)
 - `namespace` (String)
+
+
+<a id="nestedatt--items--spec"></a>
+### Nested Schema for `items.spec`
+
+Read-Only:
+
+- `configs` (Attributes List) Configurations to apply, being sets of paths, operations and JSON configurations. (see [below for nested schema](#nestedatt--items--spec--configs))
+- `endpoint_selectors` (List of String) Label selector to use to match targets to deploy Configlet to.
+- `endpoints` (List of String) Reference to targets to deploy Configlet to.
+- `operating_system` (String) Operating system to match against when selecting targets.
+- `priority` (Number) Priority of this Configlet, between -100 and 100. Higher priorities overwrite lower priorities in the event of conflicts.
+- `version` (String) Version to match against when selecting targets.
+
+<a id="nestedatt--items--spec--configs"></a>
+### Nested Schema for `items.spec.configs`
+
+Read-Only:
+
+- `config` (String) JSON-formatted string representing the configuration to apply.
+- `operation` (String) Indicates the operation in which to apply the configuration.
+- `path` (String) Path to apply the configuration in jspath notation, including any keys if relevant, e.g. .system.information.
+
 
 
 <a id="nestedatt--items--status"></a>
